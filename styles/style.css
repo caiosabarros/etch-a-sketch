@@ -1,0 +1,12 @@
+.color {
+   background-color: aqua;
+   color: aquamarines;
+}
+#container{
+  display: grid;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+  grid-gap: 3px;
+}
+#biggercontainer{
+   
+}
