@@ -1,5 +1,5 @@
 .color {
-   background-color: aqua;
+   background-color: rgb(0, 16, 236);
    color: antiquewhite;
 }
 #container{
@@ -8,8 +8,6 @@
   border: 2px solid rgb(161, 94, 5);
   width:50vh;
   height: 50vh;
-/*find why wwhnee I put grid-gap, the color
-isnot a fixed one*/
   
 }
 #biggercontainer{
@@ -19,5 +17,5 @@ isnot a fixed one*/
    
 }
 body {
-  
+  background-image: url("/images/img.jpeg");
 }
