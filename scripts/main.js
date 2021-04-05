@@ -2,10 +2,15 @@
 const container = document.querySelector("#container");
 const btn = document.querySelector("#btn");
 
-//let number = prompt('Ok, agora decida quantos quadrado queres');
+let number = prompt('Ok, agora decida quantos quadrado queres');
 //create a grid (with changeble size) begginging at 16x16 using divs
 //create divs first:
-const m = 256;
+//change the property of the divs template-grid
+container.setAttribute('style', `grid-template: repeat(${number}, 1fr) / repeat(${number}, 1fr)`);
+
+const m = number*number;
+
+
 let j = 0;
 while(j < m){
     let div = document.createElement("div");
@@ -25,7 +30,7 @@ container.addEventListener("mouseover", function(e){
 });
 
 function clearDivs(){
-    for(let i=0; i<256 ; i++){
+    for(let i=0; i<m ; i++){
      const n = document.getElementById(`${i}`);
      n.setAttribute("style", "background-color: aqua");
 
