@@ -1,25 +1,39 @@
 //steps to create this project ()=optional, more advanced:
 const container = document.querySelector("#container");
+const btn = document.querySelector("#btn");
 
-
-
+//let number = prompt('Ok, agora decida quantos quadrado queres');
 //create a grid (with changeble size) begginging at 16x16 using divs
 //create divs first:
-const i = 256;
+const m = 256;
 let j = 0;
-while(j < i){
+while(j < m){
     let div = document.createElement("div");
     div.setAttribute("id", `${j}`);
     div.classList.add('color');
-    div.textContent = "AM i HERE?";
+    //div.textContent = `${j}`;
+    div.setAttribute('style', 'color: blue; padding: 10px'); 
     container.appendChild(div);
     j++;
 }
 
-container.addEventListener("mouseover", function(e){
-       e.target.style.backgroundColor = "purple";
 
+//let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+
+container.addEventListener("mouseover", function(e){
+       e.target.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 });
+
+function clearDivs(){
+    for(let i=0; i<256 ; i++){
+     const n = document.getElementById(`${i}`);
+     n.setAttribute("style", "background-color: aqua");
+
+    }
+}
+
+btn.addEventListener("click", clearDivs);
+
 
 /*let div1 = document.createElement("div");
 div1.setAttribute("id", "1");

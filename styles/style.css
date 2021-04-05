@@ -1,12 +1,23 @@
 .color {
    background-color: aqua;
-   color: aquamarines;
+   color: antiquewhite;
 }
 #container{
   display: grid;
-  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
-  grid-gap: 3px;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr); 
+  border: 2px solid rgb(161, 94, 5);
+  width:50vh;
+  height: 50vh;
+/*find why wwhnee I put grid-gap, the color
+isnot a fixed one*/
+  
 }
 #biggercontainer{
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
    
+}
+body {
+  
 }
